@@ -1,0 +1,32 @@
+<div class="w-full flex justify-between items-center h-full px-10">
+    <div class="w-auto bg-red-500" (click)="openSidebar()">
+        <img src="../../../../../assets/Admin/Admin-Icons/admin-hamburger.svg" />
+    </div>
+    <div class="flex items-center gap-8">
+        <div class="flex items-center gap-3">
+            <div>
+                <img src="../../../../../assets/Admin/Admin-Icons/admin-info.svg" />
+            </div>
+            <div>
+                <img src="../../../../../assets/Admin/Admin-Icons/admin-bell.svg" />
+            </div>
+            <div>
+                <img src="../../../../../assets/Admin/Admin-Icons/admin-setting.svg" />
+            </div>
+            <div>
+                <img src="../../../../../assets/Admin/Admin-Icons/admin-signout.svg" />
+            </div>
+        </div>
+        <div>
+            <span class="text-primary-color text-2xl font-bold">Admin</span>
+        </div>
+    </div>
+</div>
+<div *ngIf="sidebarVisibility" class="w-full fixed top-0 left-0 right-0 bottom-0 backdrop-blur-sm">
+    <div class="w-[350px] h-full bg-white rounded-r-3xl relative">
+        <p>Hallo World</p>
+        <div class="absolute">
+
+        </div>
+    </div>
+</div>    
