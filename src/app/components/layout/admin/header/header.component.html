@@ -1,5 +1,5 @@
 <div class="w-full flex justify-between items-center h-full px-10">
-    <div class="w-auto bg-red-500" (click)="openSidebar()">
+    <div class="w-auto cursor-pointer" (click)="openSidebar()">
         <img src="../../../../../assets/Admin/Admin-Icons/admin-hamburger.svg" />
     </div>
     <div class="flex items-center gap-8">
@@ -22,11 +22,24 @@
         </div>
     </div>
 </div>
-<div *ngIf="sidebarVisibility" class="w-full fixed top-0 left-0 right-0 bottom-0 backdrop-blur-sm">
-    <div class="w-[350px] h-full bg-white rounded-r-3xl relative">
-        <p>Hallo World</p>
-        <div class="absolute">
-
+<div [@slideRight] *ngIf="sidebarVisibility" class="w-[350px] fixed top-0 left-0 right-0 bottom-0 backdrop-blur-sm">
+    <div class="h-full bg-white rounded-r-3xl p-5">
+        <div class="flex justify-between items-center">
+            <div class="cursor-pointer">
+                <span class="font-bold text-2xl">Yok Design</span>
+            </div>
+            <div class="cursor-pointer" (click)="closeSidebar()">
+                <img src="../../../../../assets/Admin/Admin-Icons/admin-close.svg" />
+            </div>
+        </div>
+        <div class="mt-10">
+            <a routerLink="admin/dashboard-admin" routerLinkActive="bg-primary-color" class="flex items-center gap-2  p-3 rounded-xl mb-2" (click)="closeSidebar()">
+                <div>
+                    <img *ngIf="isActive('/admin/dashboard-admin')" src="../../../../../assets/Admin/Admin-Icons/admin-home-active.svg" />
+                    <img *ngIf="!isActive('/admin/dashboard-admin')" src="../../../../../assets/Admin/Admin-Icons/admin-home-non-active.svg" />
+                </div>
+                <span routerLinkActive="text-white">Dashboard</span>
+            </a>
         </div>
     </div>
-</div>    
+</div>

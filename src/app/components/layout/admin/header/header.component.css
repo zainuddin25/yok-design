@@ -1,0 +1,20 @@
+.slide-right {
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-right.ng-enter {
+  transform: translateX(-100%);
+}
+
+.slide-right.ng-enter-active {
+  transform: translateX(0%);
+}
+
+.slide-right.ng-exit {
+  transform: translateX(0%);
+}
+
+.slide-right.ng-exit-active {
+  transform: translateX(100%);
+}

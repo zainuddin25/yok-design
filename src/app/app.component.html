@@ -1,8 +1,10 @@
 <div class="w-screen h-screen bg-background">
   <div id="header" class="w-full h-[10%]">
-    <app-header-admin></app-header-admin>
+    <app-header-admin *ngIf="role === 'admin'"></app-header-admin>
+    <app-header-contestor *ngIf="role === 'contestor'"></app-header-contestor>
+    <app-header-user *ngIf="role === 'user'"></app-header-user>
   </div>
   <div class="w-full h-[90%]">
-
+    <router-outlet></router-outlet>
   </div>
 </div>
