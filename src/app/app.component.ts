@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'YokDesign';
   role: string = 'admin'
+  ngOnInit() {
+    localStorage.setItem('role', 'admin')
+  }
 }

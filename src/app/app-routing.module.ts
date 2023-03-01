@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './pages/admin/admin.component';
+import { RestrictionComponent } from './pages/restriction/restriction.component';
+import { DashboardAdminComponent } from './pages/admin/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -13,10 +14,14 @@ const routes: Routes = [
     children: [
       {
         path: 'dashboard-admin',
-        component: AdminComponent
+        component: DashboardAdminComponent
       }
     ]
   },
+  {
+    path: 'restriction',
+    component: RestrictionComponent
+  }
 ];
 
 @NgModule({

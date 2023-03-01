@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="mt-10">
-            <a routerLink="admin/dashboard-admin" routerLinkActive="bg-primary-color" class="flex items-center gap-2  p-3 rounded-xl mb-2" (click)="closeSidebar()">
+            <a routerLink="/admin/dashboard-admin" routerLinkActive="bg-primary-color" class="flex items-center gap-2  p-3 rounded-xl mb-2" (click)="closeSidebar()">
                 <div>
                     <img *ngIf="isActive('/admin/dashboard-admin')" src="../../../../../assets/Admin/Admin-Icons/admin-home-active.svg" />
                     <img *ngIf="!isActive('/admin/dashboard-admin')" src="../../../../../assets/Admin/Admin-Icons/admin-home-non-active.svg" />

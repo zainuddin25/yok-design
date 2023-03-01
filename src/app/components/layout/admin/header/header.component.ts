@@ -22,7 +22,7 @@ import { Router } from '@angular/router';
 export class HeaderAdminComponent {
   constructor(private router : Router) {}
 
-  sidebarVisibility: boolean = true
+  sidebarVisibility: boolean = false
 
   isActive(routePath: string): boolean {
     return this.router.url === routePath;
