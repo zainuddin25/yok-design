@@ -1,1 +1,72 @@
-<p>dashboard works!</p>
+<div class="w-full h-full grid grid-cols-9 grid-rows-4 gap-4">
+    <div class="group bg-white col-span-2 row-span-1 hover:bg-primary-color duration-200 rounded-md p-4 border-2 border-border-color hover:border-white">
+        <div class="flex justify-between items-start mb-2">
+            <div class="flex flex-col">
+                <span class="font-inter font-extrabold text-2xl group-hover:text-white duration-200">120</span>
+                <span class="text-sm font-normal text-secondary-color pt-1">Total Users</span>
+            </div>
+            <div class="p-2 bg-primary-color rounded-lg group-hover:bg-white/10 duration-200">
+                <img src="../../../../assets/Admin/Admin-Icons/admin-users.svg" />
+            </div>
+        </div>
+        <span class="text-sm text-secondary-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+    </div>
+    <div class="group bg-white col-span-2 row-span-1 hover:bg-primary-color duration-200 rounded-md p-4 border-2 border-border-color hover:border-white">
+        <div class="flex justify-between items-start mb-2">
+            <div class="flex flex-col">
+                <span class="font-inter font-extrabold text-2xl group-hover:text-white duration-200">120</span>
+                <span class="text-sm font-normal text-secondary-color pt-1">Total Users</span>
+            </div>
+            <div class="p-2 bg-primary-color rounded-lg group-hover:bg-white/10 duration-200">
+                <img src="../../../../assets/Admin/Admin-Icons/admin-users.svg" />
+            </div>
+        </div>
+        <span class="text-sm text-secondary-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+    </div>
+    <div class="group bg-white col-span-2 row-span-1 hover:bg-primary-color duration-200 rounded-md p-4 border-2 border-border-color hover:border-white">
+        <div class="flex justify-between items-start mb-2">
+            <div class="flex flex-col">
+                <span class="font-inter font-extrabold text-2xl group-hover:text-white duration-200">120</span>
+                <span class="text-sm font-normal text-secondary-color pt-1">Total Users</span>
+            </div>
+            <div class="p-2 bg-primary-color rounded-lg group-hover:bg-white/10 duration-200">
+                <img src="../../../../assets/Admin/Admin-Icons/admin-users.svg" />
+            </div>
+        </div>
+        <span class="text-sm text-secondary-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+    </div>
+    <div class="bg-red-500 col-span-3 row-span-5">
+        4
+    </div>
+    <div class="col-span-4 row-span-2 bg-white rounded-md p-4 border-2 border-border-color">
+        <div class="w-full flex justify-between items-center">
+            <span class="text-2xl font-bold">Statistics</span>
+            <div class="flex bg-background p-1 rounded-md border-2 border-border-color">
+                <span class="py-0.5 px-5 rounded-md text-xs" [ngClass]="{'bg-primary-color text-white' : week}" (click)="handleWeek()">Week</span>
+                <span class="py-0.5 px-5 rounded-md text-xs" [ngClass]="{'bg-primary-color text-white' : month}" (click)="handleMonth()">Month</span>
+                <span class="py-0.5 px-5 rounded-md text-xs" [ngClass]="{'bg-primary-color text-white' : year}" (click)="handleYear()">Year</span>
+            </div>
+        </div>
+        <div class="">
+            <div [ngSwitch]="chartSelected">
+                <app-year *ngSwitchCase="'year'"></app-year>
+                <app-month *ngSwitchCase="'month'"></app-month>
+                <app-week *ngSwitchCase="'week'"></app-week>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white rounded-md border-2 border-border-color col-span-2 row-span-2 flex flex-col justify-between">
+        <div class="w-full flex justify-between items-center pt-4 px-4">
+            <span class="text-2xl font-bold">Data</span>
+        </div>
+        <div class="h-3/4 w-full flex justify-center items-center">
+            <canvas id="MyChartPie" >{{ pie }}</canvas>
+        </div>
+    </div>
+    <div class="bg-red-500 col-span-3 row-span-1">
+        6
+    </div>
+    <div class="bg-red-500 col-span-3 row-span-1">
+        7
+    </div>
+</div>

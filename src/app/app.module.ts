@@ -9,6 +9,9 @@ import { HeaderContestorComponent } from './components/layout/contestor/header/h
 import { HeaderUserComponent } from './components/layout/user/header/header.component';
 import { RestrictionComponent } from './pages/restriction/restriction.component';
 import { DashboardAdminComponent } from './pages/admin/dashboard/dashboard.component';
+import { MonthComponent } from './components/chartjs-admin/month/month.component';
+import { YearComponent } from './components/chartjs-admin/year/year.component';
+import { WeekComponent } from './components/chartjs-admin/week/week.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { DashboardAdminComponent } from './pages/admin/dashboard/dashboard.compo
     HeaderUserComponent,
     RestrictionComponent,
     DashboardAdminComponent,
+    MonthComponent,
+    YearComponent,
+    WeekComponent,
 
   ],
   imports: [
